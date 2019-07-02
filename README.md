@@ -1,6 +1,6 @@
 # ui5con-2019-d3js
 
-UI5con 2019 - Integrating D3.js Visualizations via Custom Controls - Live
+[UI5con 2019](https://openui5.org/ui5con/) - Integrating D3.js Visualizations via Custom Controls - Live
 
 [📊 open slides](https://www.slideshare.net/MaximilianLenkeit/ui5con-2019-integrating-d3js-visualizations-via-custom-controls-live) | 🎥 watch recording (pending) | [⚗️ run the custom control](#run-the-custom-control) | [🔎 browse the code](./webapp/controls/SomeD3Viz.js)
 
