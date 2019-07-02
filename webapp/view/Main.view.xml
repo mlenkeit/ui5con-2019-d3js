@@ -1,0 +1,23 @@
+<mvc:View
+  controllerName="com.sap.ui5con2019.d3js.controller.Main"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:controls="com.sap.ui5con2019.d3js.controls"
+  xmlns:base="sap.ui.base"
+  xmlns="sap.m">
+  <Page title="UI5 + D3.js = ❤️">
+    <Text text="Hello UI5 Con" />
+    
+    <controls:SomeD3Viz data="{/ui5con}">
+      <controls:data>
+        <base:ManagedObject />
+      </controls:data>
+    </controls:SomeD3Viz>
+    
+    <footer>
+      <Toolbar>
+        <ToolbarSpacer />
+        <Button text="Let's celebrate!" press=".handleCelebratePress" />
+      </Toolbar>
+    </footer>
+  </Page>
+</mvc:View>

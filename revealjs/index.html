@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>UI5con@SAP 2019</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<style>
+			.reveal {
+				font-size: 58px;
+			}
+			.reveal,
+			.reveal h1,
+			.reveal h2,
+			.reveal h3,
+			.reveal h4,
+			.reveal h5,
+			.reveal h6 {
+				font-family: Arial, Helvetica, sans-serif;
+				text-transform: none;
+			}
+			.ui5con-alignleft .slides section,
+			.ui5con-alignleft .slides section > section {
+				text-align: start;
+			}
+			.reveal code,
+			.reveal pre {
+				font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+			}
+
+			.ui5con-orange {
+				color: rgb(240, 171, 0);
+			}
+			.ui5con-title {
+				width: 48%;
+				text-align: start;
+				padding-left: 1%;
+				padding-top: 2%;
+				margin-left: 0;
+				font-size: 72px;
+				font-weight: bold;
+			}
+			.ui5con-speakertitle {
+				font-size: 30px;
+				text-align: start;
+				padding-left: 1%;
+				padding-top: 5%;
+			}
+			.ui5con-aligntop .ui5con-title {
+				padding-top: 20%;
+			}
+			.ui5con-logo {
+				width: 50%;
+				height: 100%;
+				position: absolute;
+				right: 2%;
+				top: 0;
+				background-image: url(images/UI5con.png);
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+			.ui5con-aligntop .ui5con-logo {
+				top: 44%;
+			}
+			h2.ui5con-divider {
+				text-align: start;
+				font-size: 92px;
+				padding-left: 2%;
+			}
+			.ui5con-aligntop h2.ui5con-divider {
+				padding-top: 23%;
+			}
+			.ui5con-thankyou {
+				font-size: 120px;
+				font-weight: bold;
+				text-align: start;
+				padding-left: 2%;
+			}
+			.ui5con-aligntop .ui5con-thankyou {
+				padding-top: 12%;
+			}
+			.ui5con-speakerdetails {
+				font-size: 36px;
+				text-align: start;
+				padding-top: 5%;
+				padding-left: 2%;
+			}
+			li code {
+				color: #828282;
+			}
+			li {
+				margin-bottom: 2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-background-color="#000">
+					<div class="ui5con-title ui5con-left">
+						<div>Integrating <span class="ui5con-orange">D3.js</span> Visualizations via Custom Controls</div>
+						<div class="ui5con-orange">- Live</div>
+					</div>
+					
+					<div class="ui5con-logo"></div>
+
+					<div class="ui5con-speakertitle">
+						Maximilian Lenkeit, SAP SE<br>
+						<span style="position: absolute;">
+							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" class="u01__brand-icon twtr-icon--base  twtr-color-fill--white-neutral" style="fill: #1da1f2; position: relative; top: 5px;"> 
+								<path opacity="0" d="M0 0h24v24H0z"></path> 
+								<path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"></path> 
+							</svg>
+						</span>
+						<span style="margin-left: 40px">@mlenkeit</span><br>
+						June 28, 2019			
+					</div>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="u01__brand-icon twtr-icon--base  twtr-color-fill--white-neutral"> 
+ <path opacity="0" d="M0 0h24v24H0z"></path> 
+ <path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"></path> 
+</svg>
+				</section>
+
+				<!-- <section data-background-color="#000">
+					<h2 class="ui5con-divider">Divider <span class="ui5con-orange">page</span></h2>
+				</section> -->
+
+				<section>
+					<h3>SVG is HTML for Graphics</h3>
+					<p>&nbsp;</p>
+					<pre class="xml"><code data-trim data-escape>
+							<svg>
+							    <rect width="20" height="90" x="0" &nbsp;transform="translate(0,  0)"></rect>
+							    <rect width="20" height="85" x="25" transform="translate(0,  5)"></rect>
+							    <rect width="20" height="80" x="50" transform="translate(0, 10)"></rect>
+							</svg>
+					</code></pre>
+					<p>&nbsp;</p>
+					<p class="fragment">
+						Result in the browser:
+						<pre class="fragment" style="text-align:center; background-color: #272822;">
+<svg style="background: white; padding: 10px; margin: 10px;">
+		<rect width="20" height="90" x="0" transform="translate(0,  0)"></rect>
+		<rect width="20" height="85" x="25" transform="translate(0,  5)"></rect>
+		<rect width="20" height="80" x="50" transform="translate(0, 10)"></rect>
+</svg>
+						</pre>
+					</p>
+				</section>
+				
+				<section>
+					<h3>D3.js Builds SVG Dynamically</h3>
+					<p>&nbsp;</p>
+					<pre class="javascript"><code data-trim data-escape>
+						const selSvg = d3.select('#svg'); 
+						const aData = [ {x: 30}, {x: 25}, {x: 20} ]; 
+						const selRects = selSvg.selectAll('rect').data(aData); 
+
+						selRects.enter().append('rect') 
+							.attr('width', 20) 
+							.attr('height', d => d.x) 
+							.attr('x', (d, i) => i * 25);
+					</code></pre>
+					<p>&nbsp;</p>
+					<p class="fragment">
+						SVG markup, dynamically generated:
+						<pre class="fragment xml"><code data-trim data-escape>
+								<svg id="svg"> 
+								    <rect width="20" height="30" x="0"></rect> 
+								    <rect width="20" height="25" x="25"></rect> 
+								    <rect width="20" height="20" x="50"></rect> 
+								</svg>
+						</code></pre>
+					</p>
+					<p class="fragment">
+						All samples on <a href="https://d3js.org" target="_blank">d3js.org</a>
+					</p>
+				</section>
+				
+				<section>
+						<h2>Remember, Remember!</h3>
+						<ol>
+							<li class="fragment">Wrap d3.js visualization as custom control!</li>
+							<li class="fragment">Use <code>sap.ui.core.HTML</code> to wrap the SVG element!</li>
+							<li class="fragment">Call d3.js from <code>onAfterRendering</code>!</li>
+							<li class="fragment">Make it response with <code>sap.ui.core.ResizeHandler</code>!</li>
+							<li class="fragment">Use a dummy aggregation to bind against a data model!</li>
+						</ol>
+				</section>
+
+				<section data-background-color="#000">
+					<div class="ui5con-thankyou ui5con-orange">Thank you.</div>
+					<div class="ui5con-logo"></div>
+					<div class="ui5con-speakerdetails">
+							Contact information:<br><br>
+							Maximilian Lenkeit, SAP SE<br>
+							<span style="position: absolute;">
+								<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" class="u01__brand-icon twtr-icon--base  twtr-color-fill--white-neutral" style="fill: #1da1f2; position: relative; top: 5px;"> 
+									<path opacity="0" d="M0 0h24v24H0z"></path> 
+									<path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"></path> 
+								</svg>
+							</span>
+							<span style="margin-left: 40px">@mlenkeit</span>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				slideNumber: true,
+				hash: true,
+				history: true,
+				width: 1920,
+				height: 1080,
+				center: true, // when changing to "false", add the CSS class "ui5con-aligntop" (and optionally ui5con-alignleft") to the body tag in the HTML
+				transition: 'convex',         // none/fade/slide/convex/concave/zoom
+				backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>

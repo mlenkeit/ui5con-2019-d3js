@@ -1,0 +1,198 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson
+
+'.js':
+  'custom-control':
+    'prefix': 'sap.ui.define',
+    'body': """
+sap.ui.define([
+  'sap/ui/core/Control'
+], function(Control) {
+  'use strict';
+  
+  return Control.extend('sap.ui5con2019.d3js.controls.SomeD3Viz', {
+  
+  });
+});
+"""
+  'custom-control-renderer':
+    'prefix': 'renderer',
+    'body': """
+renderer: {
+  apiVersion: 2,
+  render: function(oRm, oControl) {
+    oRm.openStart('div', oControl);
+    oRm.class('someViz');
+    oRm.openEnd();
+    oRm.openStart('p').openEnd();
+    oRm.text('Custom controls are great 🎉');
+    oRm.close('p');
+    oRm.close('div');
+  }
+}
+"""
+  'html-control':
+    'prefix': 'html',
+    'body': """
+'sap/ui/core/HTML'
+"""
+  'custom-control-metadata':
+    'prefix': 'metadata',
+    'body': """
+metadata: {
+  aggregations: {
+    _html: {
+      type: 'sap.ui.core.HTML',
+      multiple: false,
+      visibility: 'hidden'
+    }
+  }
+},
+"""
+  'custom-contorl-init':
+    'prefix': 'init',
+    'body': """
+init: function() {
+  this._sContainerId = this.getId() + '--container'
+  this.setAggregation('_html', new HTML({
+    content: `<svg id="${this._sContainerId}"></svg>`
+  }))
+},
+"""
+  'custom-control-render-html':
+    'prefix': 'oRm',
+    'body': """
+oRm.renderControl(oControl.getAggregation('_html'));
+"""
+  'custom-control-oar':
+    'prefix': 'onAfterRendering',
+    'body': """
+onAfterRendering: function() {
+  const height = 500;
+  const width = this.$().width();
+  console.log('rendering with width', width);
+  
+  const svg = d3.select('#' + this._sContainerId)
+  svg.attr("height", height).attr("width", "100%")
+}
+"""
+  'd3-standard':
+    'prefix': 'd3js',
+    'body': """
+'sap/ui/thirdparty/d3'
+"""
+  'd3v3':
+    'prefix': 'd3v3',
+    'body': """
+'./../thirdparty/d3.v3.min'
+"""
+  'd3v5':
+    'prefix': 'd3v5',
+    'body': """
+'./../thirdparty/d3.v5'
+"""
+  'resize-handler':
+    'prefix': 'resize',
+    'body': """
+'sap/ui/core/ResizeHandler'
+"""
+  'resize-handler-register':
+    'prefix': 'register'
+    'body': """
+this._sResizeHandlerId = ResizeHandler.register(this, this._onResize.bind(this));
+"""
+  'resize-handler-deregister':
+    'prefix': 'onBeforeRendering',
+    'body': """
+onBeforeRendering: function() {
+  ResizeHandler.deregister(this._sResizeHandlerId);
+},
+"""
+  'resize-handler-fn':
+    'prefix': '_onResize',
+    'body': """
+    _onResize: function() {
+      console.log('resize to width:', this.$().width());
+    },
+"""
+  'first-rendering-only':
+    'prefix': 'first',
+    'body': """
+if (this._bFirstRendering !== true) {
+  this._bFirstRendering = true;
+} else {
+}
+"""
+  'logdata':
+    'prefix': 'logdata',
+    'body': """
+console.log(JSON.stringify(data, null, 2))
+"""
+  'data-binding-metadata':
+    'prefix': 'data',
+    'body': """
+data: {
+  type: 'sap.ui.base.ManagedObject'
+}
+"""
+  'data-binding-get-data':
+    'prefix': 'getBinding',
+    'body': """
+getBinding("data").getContexts()
+  .map(oContext => oContext.getObject());
+"""
+  'data-binding-attach-change':
+    'prefix': 'attachChange',
+    'body': """
+this.getBinding("data").attachChange(this._renderViz, this);
+"""
+  'data-binding-detach-change':
+    'prefix': 'detachChange',
+    'body': """
+this.getBinding("data").detachChange(this._renderViz, this);
+"""
+    
+
+'.xml':
+  'custom-control-namespace':
+    'prefix': 'xmlns',
+    'body': """
+xmlns:controls="com.sap.ui5con2019.d3js.controls"
+"""
+  'custom-control':
+    'prefix': 'controls',
+    'body': """
+controls:SomeD3Viz>
+</controls:SomeD3Viz>
+"""
+  'custom-control-data':
+    'prefix': 'data',
+    'body': """
+controls:data>
+  <base:ManagedObject />
+</controls:data>
+"""
+  'base': 
+    'prefix': 'base',
+    'body': """
+xmlns:base="sap.ui.base"
+"""

@@ -1,0 +1,47 @@
+{
+  "name": "ui5con-2019-d3js",
+  "version": "1.0.0",
+  "private": true,
+  "description": "UI5con 2019 - Integrating D3.js Visualizations via Custom Controls - Live",
+  "scripts": {
+    "start": "ui5 serve -o index.html",
+    "slides": "grunt serve --root=revealjs",
+    "postinstall": "cp node_modules/d3/dist/d3.min.js webapp/thirdparty/d3.v5.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlenkeit/ui5con-2019-d3js.git"
+  },
+  "keywords": [],
+  "author": "Maximilian Lenkeit <maximilian.lenkeit@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mlenkeit/ui5con-2019-d3js/issues"
+  },
+  "homepage": "https://github.com/mlenkeit/ui5con-2019-d3js#readme",
+  "dependencies": {
+    "@openui5/sap.m": "1.67.1",
+    "@openui5/sap.ui.core": "1.67.1",
+    "@openui5/themelib_sap_belize": "1.67.1",
+    "@ui5/cli": "1.5.5",
+    "d3": "5.9.7"
+  },
+  "devDependencies": {
+    "express": "^4.16.2",
+    "grunt": "^1.0.4",
+    "grunt-cli": "^1.3.2",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-connect": "^2.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-jshint": "^2.0.0",
+    "grunt-contrib-qunit": "^3.1.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.0.2",
+    "grunt-zip": "~0.17.1",
+    "load-grunt-tasks": "^4.0.0",
+    "node-sass": "^4.11.0",
+    "mustache": "^2.3.0",
+    "socket.io": "^2.2.0"
+  }
+}

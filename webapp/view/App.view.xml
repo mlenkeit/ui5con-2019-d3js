@@ -1,0 +1,8 @@
+<mvc:View
+  xmlns:mvc="sap.ui.core.mvc"
+  displayBlock="true"
+  busy="{appView>/busy}"
+  busyIndicatorDelay="{appView>/delay}"
+  xmlns="sap.m">
+  <App id="idAppControl" />
+</mvc:View>
