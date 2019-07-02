@@ -10,6 +10,10 @@
 
 The D3.js visualizations that we [randomly selected](./console.js) was the [Bubble Chart](https://observablehq.com/@d3/bubble-chart) by [Mike Bostock](https://bost.ocks.org/mike/).
 
+#### Preview
+
+<img src="https://github.com/mlenkeit/ui5con-2019-d3js/raw/master/social-preview.png" width="50%" />
+
 ## Run the Custom Control
 
 ```
