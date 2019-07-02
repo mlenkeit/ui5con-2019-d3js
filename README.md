@@ -4,6 +4,8 @@ UI5con 2019 - Integrating D3.js Visualizations via Custom Controls - Live
 
 [📊 open slides](https://www.slideshare.net/MaximilianLenkeit/ui5con-2019-integrating-d3js-visualizations-via-custom-controls-live) | 🎥 watch recording (pending) | [⚗️ run the custom control](#run-the-custom-control) | [🔎 browse the code](./webapp/controls/SomeD3Viz.js)
 
+#### Abstract
+
 > In this session, we will explore the concepts for integrating D3.js with OpenUI5 via Custom Controls. This includes lifecycle and data binding. To demonstrate these concepts, we will randomly pick a public D3.js sample visualization during the session and integrate it live into an existing application.
 
 The D3.js visualizations that we [randomly selected](./console.js) was the [Bubble Chart](https://observablehq.com/@d3/bubble-chart) by [Mike Bostock](https://bost.ocks.org/mike/).
