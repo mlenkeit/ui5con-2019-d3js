@@ -24,7 +24,7 @@
     "@openui5/sap.ui.core": "1.67.1",
     "@openui5/themelib_sap_belize": "1.67.1",
     "@ui5/cli": "1.5.5",
-    "d3": "5.9.7"
+    "d3": "7.6.1"
   },
   "devDependencies": {
     "express": "^4.16.2",
